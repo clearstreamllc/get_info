@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearStream LLC</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "iZiJ1tmMO3X76jOBw",
+            });
+        })();
+    </script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <div id="logo_combo">
+                <img src="img\ClearStream LOGO for Google.png" alt="LOGO" width="100">
+                <h1 id="name">Clear Stream LLC</h1>
+            </div>
+            <nav id="for_logo">
+                <ul>
+                    <li id="phone"><a href="tel:+14238136455">Mark +1 (423)813-6455</a></li>
+                </ul>
+                <div class="soc_media">
+                    <a href="https://www.instagram.com/clear_.stream._" target="_blank">
+                        <img src="img\instagram.png" alt="Instagram" style="width: 25px; height: 25px;">
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61573273110808&" target="_blank">
+                        <img src="img\facebook.png" alt="Facebook" style="width: 25px; height: 25px;">
+                    </a>
+                    <a href="https://wa.me/4238136455?text=Hi%2C%20I%20need%20information%20about
+                    %20your%20pressure%20washing%20services" target="_blank">
+                        <img src="img\whatsapp.png" alt="Whatsapp" style="width: 25px; height: 25px;">
+                    </a>
+                </div>
+                <ul>
+                    <li class="hide"><a href="#home">Home</a></li>
+                    <li class="hide"><a href="#services">Services</a></li>
+                    <li class="hide"><a href="#galery">Gallery</a></li>
+                    <li class="hide"><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section id="home">
+        <h2>Pressure & Soft Washing</h2>
+        <h2>Solutions</h2>
+        <p>Your trusted partner for all washing needs.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <h3>Concrete Cleaning</h3>
+                <p>Restore driveways, sidewalks, and patios to their original condition by applying pressure and chemicals</p>
+
+            </div>
+            <div class="service-card">
+                <h3>House Washing</h3>
+                <p>No pressure. Safely remove dirt, grime, and mildew from siding and exterior walls</p>
+            </div>
+            <div class="service-card">
+                <h3>Deck and Fence Cleaning</h3>
+                <p>Revitalize wooden surfaces by removing stains and weathering</p>
+            </div>
+            <div class="service-card">
+                <h3>Roof Cleaning</h3>
+                <p>Gentle cleaning to remove moss, algae, and debris without damage</p>
+            </div>
+            <div class="service-card">
+                <h3>Gutter Cleaning</h3>
+                <p>Clear gutters of leaves, dirt, and debris for proper drainage</p>
+            </div>
+            <div class="service-card">
+                <h3>Commercial Services</h3>
+                <p>Offer pressure washing for businesses, including storefronts, parking lots, and industrial equipment</p>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="galery">
+        <h2>Before & After Gallery</h2>
+        <div id="photos">
+            <div class="gallery-item">
+                <img src="img\image1.jpg" alt="Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="img\image2.jpg" alt="Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="img\image3.jpg" alt="Image 3">
+            </div>
+            <div class="gallery-item">
+                <img src="img\image4.jpg" alt="Image 4">
+            </div>
+        </div>
+        <!-- Add more items as needed -->
+    </section>
+
+    
+<!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="soc_media">
+            <a href="https://www.instagram.com/clear_.stream._" target="_blank">
+                <img src="img\instagram.png" alt="Instagram" style="width: 40px; height: 40px;">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61573273110808&" target="_blank">
+                <img src="img\facebook.png" alt="Facebook" style="width: 40px; height: 40px;">
+            </a>
+            <a href="https://wa.me/4238136455?text=Hi%2C%20I%20need%20information%20about
+            %20your%20pressure%20washing%20services" target="_blank">
+                <img src="img\whatsapp.png" alt="Whatsapp" style="width: 40px; height: 40px;">
+            </a>
+        </div>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone number:</label>
+            <input type="phone" id="phone" name="phone" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" onclick="sendEmail(event)">Send</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 ClearStream LLC. All rights reserved.</p>
+    </footer>
+</body>
+</html>
