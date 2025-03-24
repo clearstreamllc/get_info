@@ -265,6 +265,11 @@ footer {
         margin-top: 10px;
     }
 
+    .icons {
+    display: flex;
+    flex-direction: column;
+    }
+
     #burger-toggle:checked + .burger + #for_logo {
         display: flex;
     }
