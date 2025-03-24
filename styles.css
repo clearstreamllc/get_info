@@ -266,8 +266,8 @@ footer {
     }
 
     .icons {
-    display: flex;
-    flex-direction: column;
+        display: flex;
+        flex-direction: row;
     }
 
     #burger-toggle:checked + .burger + #for_logo {
