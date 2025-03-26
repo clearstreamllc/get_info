@@ -96,6 +96,7 @@ body {
     border-radius: 5px;
     margin-top: 1rem;
     transition: background-color 0.3s;
+    border: none;
 }
 
 .cta-button:hover {
@@ -296,6 +297,7 @@ footer {
         padding: 0.8rem 1.5rem;
         font-size: 1.2rem;
         border-radius: 4px;
+        border: none;
     }
 
     .services {
@@ -330,6 +332,7 @@ footer {
     .input {
         width: 90%;
         padding: 0.5rem;
+        border: none;
     }
 
     .contact {
