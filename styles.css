@@ -335,6 +335,11 @@ footer {
         border: none;
     }
 
+     #service, #date {
+        color: #000000;
+        background-color: white;
+    }
+
     .contact {
         display: flex;
         /* align-self: center; */
