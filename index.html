@@ -23,44 +23,33 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <header>
-        <div id="logo">
-            <div class="icons" id="logo_combo">
-                <img src="img\ClearStream LOGO for Google.png" alt="LOGO" width="100">
-                <h1 id="name">Clear Stream LLC</h1>
+    <header class="header">
+        <nav class="nav">
+            <img src="img\ClearStream LOGO for Google.png" alt="LOGO" width="100">
+            <h1>ClearStream | Pressure Washing</h1>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
             </div>
-            <div class="icons">
-                <input type="checkbox" id="burger-toggle">
-                <label for="burger-toggle" class="burger">&#9776;</label>
-            </div>
-            <nav id="for_logo">
-                <ul>
-                    <li id="phone"><a href="tel:+14238136455">Mark +1 (423)813-6455</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#galery">Gallery</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        </nav>
     </header>
-    <!-- Hero Section -->
-    <section id="home">
-        <h2>Pressure & Soft Washing</h2>
-        <h2>Solutions</h2>
-        <p>Your trusted partner for all washing needs.</p>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Professional Pressure Washing Services</h1>
+            <p>Restore your property's beauty with our expert cleaning services</p>
+            <a href="#contact" class="cta-button">Get Free Quote</a>
+        </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service-cards">
+    <section class="services" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
             <div class="service-card">
                 <h3>Concrete Cleaning</h3>
                 <p>Restore driveways, sidewalks, and patios to their original condition by applying pressure and chemicals</p>
-
             </div>
             <div class="service-card">
                 <h3>House Washing</h3>
@@ -81,34 +70,126 @@
             <div class="service-card">
                 <h3>Commercial Services</h3>
                 <p>Offer pressure washing for businesses, including storefronts, parking lots, and industrial equipment</p>
-
             </div>
         </div>
     </section>
 
-    <section id="galery">
-        <h2>Before & After Gallery</h2>
-        <div id="photos">
+    <section class="services" id="gallery">
+        <h2 class="section-title">Before & After Gallery</h2>
+        <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="img\image1.jpg" alt="Image 1">
+                <img src="img/image1.jpg" alt="Before & After 1" class="gallery-image">
+                <div class="image-overlay">
+                    <span class="before-after">Before</span>
+                    <span class="before-after">After</span>
+                </div>
             </div>
             <div class="gallery-item">
-                <img src="img\image2.jpg" alt="Image 2">
+                <img src="img/image2.jpg" alt="Before & After 2" class="gallery-image">
+                <div class="image-overlay">
+                    <span class="before-after">Before</span>
+                    <span class="before-after">After</span>
+                </div>
             </div>
             <div class="gallery-item">
-                <img src="img\image3.jpg" alt="Image 3">
+                <img src="img/image3.jpg" alt="Before & After 3" class="gallery-image">
+                <div class="image-overlay">
+                    <span class="before-after">Before</span>
+                    <span class="before-after">After</span>
+                </div>
             </div>
             <div class="gallery-item">
-                <img src="img\image4.jpg" alt="Image 4">
+                <img src="img/image4.jpg" alt="Before & After 4" class="gallery-image">
+                <div class="image-overlay">
+                    <span class="before-after">Before</span>
+                    <span class="before-after">After</span>
+                </div>
             </div>
         </div>
-        <!-- Add more items as needed -->
-    </section>
-
     
-<!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox">
+            <span class="close-btn">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+        </div>
+    </section>
+
+    <script>
+        // Lightbox functionality
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-btn');
+        
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.querySelector('img').src;
+                lightboxImg.src = imgSrc;
+                lightbox.style.display = 'block';
+            });
+        });
+        
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+        
+        window.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+        </script>
+
+
+
+    <section class="why-choose-us" id="about">
+        <div class="section-title">
+            <h2>Why Choose Us</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Proven Results</h3>
+                <p>See the difference professional cleaning makes</p>
+            </div>
+            <div class="service-card">
+                <h3>Free Estimates</h3>
+                <p>No-obligation price assessments</p>
+            </div>
+            <div class="service-card">
+                <h3>100% Satisfaction</h3>
+                <p>We guarantee quality results every time</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="section-title">
+            <h2>Contact Us</h2>
+        </div>
+        
+        <div>
+            <form id="contact-form" onsubmit="sendEmail(event)">
+                <input class="input" id="name" type="text" placeholder="Name" required>
+                <input class="input" id="email" type="email" placeholder="Email" required>
+                <input class="input" id="phone" type="tel" placeholder="Phone" required>
+                <select class="input" id="service" required>
+                    <option value="" disabled selected>Select Service</option>
+                    <option>House Washing</option>
+                    <option>Driveway Cleaning</option>
+                    <option>Deck & Patio</option>
+                    <option>Commercial Cleaning</option>
+                </select>
+                <input class="input" id="date" type="date" placeholder="Select Date" required>
+                <textarea class="input" id="message" placeholder="Message" required></textarea>
+                <button class="cta-button" type="submit">Send Message</button>
+            </form>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 ClearStream LLC. All rights reserved.</p>
+        <p>Phone: (423) 813-6455 | Email: moskalenko@c-stream.net</p>
         <div class="soc_media">
             <a href="https://www.instagram.com/clear_.stream._" target="_blank">
                 <img src="img\instagram.png" alt="Instagram" style="width: 40px; height: 40px;">
@@ -116,29 +197,10 @@
             <a href="https://www.facebook.com/profile.php?id=61573273110808&" target="_blank">
                 <img src="img\facebook.png" alt="Facebook" style="width: 40px; height: 40px;">
             </a>
-            <a href="https://wa.me/4238136455?text=Hi%2C%20I%20need%20information%20about
-            %20your%20pressure%20washing%20services" target="_blank">
+            <a href="https://wa.me/4238136455?text=Hi%2C%20I%20need%20information%20about%20your%20pressure%20washing%20services" target="_blank">
                 <img src="img\whatsapp.png" alt="Whatsapp" style="width: 40px; height: 40px;">
             </a>
         </div>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">Phone number:</label>
-            <input type="phone" id="phone" name="phone" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit" onclick="sendEmail(event)">Send</button>
-        </form>
-    </section>
-    <footer>
-        <p>&copy; 2025 ClearStream LLC. All rights reserved.</p>
     </footer>
 </body>
 </html>
