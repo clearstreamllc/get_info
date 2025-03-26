@@ -277,7 +277,7 @@ footer {
     }
 
     .hero {
-        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/background.png');
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/background.jpg');
         background-size: cover;
         background-position: center;
         text-align: center;
@@ -372,7 +372,7 @@ footer {
  
 
     .hero {
-        background: linear-gradient(rgba(0, 0, 0, 0.518), rgba(0,0,0,0.5)), url('img/background.png');
+        background: linear-gradient(rgba(0, 0, 0, 0.518), rgba(0,0,0,0.5)), url('img/background.jpg');
         background-size: cover;
         background-position: center;
         text-align: center;
