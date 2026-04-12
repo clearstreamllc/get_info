@@ -1,5 +1,15 @@
+function checkConnection() {
+    return typeof emailjs !== "undefined" && typeof emailjs.send === "function";
+}
+
 function sendEmail(event) {
     event.preventDefault(); // Prevent form submission (page refresh)
+
+    // Verify EmailJS is loaded and initialized
+    if (!checkConnection()) {
+        alert("Email service is unavailable. Please refresh the page and try again.");
+        return;
+    }
 
     // Get form values
     const name = document.getElementById("name").value;
